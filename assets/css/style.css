@@ -22,9 +22,7 @@ button{
     color: #1877f2;
     font-size: 3.6rem;
     }
-    .loginTitle p{
-        padding: 0 120px;
-    }
+   
 .loginForm{
     height: 330px;
     background-color: #fff;
@@ -77,7 +75,7 @@ font-size: 1.1rem;
     grid-area: loginFooter;
 }
 .loginFooter p{
-    padding: 12px 120px;
+   
     font-size: 0.9rem;
 }
 .loginFooter p a{
@@ -86,6 +84,7 @@ font-size: 1.1rem;
     font-weight: bold;
 }
 .containerLogin{
+    justify-content: center;
     margin-top: 30px;
     text-align: center;
     height: 100vh;
@@ -108,4 +107,24 @@ font-size: 1.1rem;
         grid-template-areas: "loginTitle loginForm"  "none  loginFooter";
     }
     
+}
+@media screen and (max-width: 900px) {
+  
+        .containerLogin{
+            margin-top: 12px;
+        }
+        .loginTitle p{
+            width: 80%;
+            margin: 0  auto;
+                }
+       .containerLogin{
+        height: 75vh;
+       }
+      
+}
+
+@media screen and (max-width: 500px) {
+    .loginForm{
+        width: 95%;
+    }
 }
