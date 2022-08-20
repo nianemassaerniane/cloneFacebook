@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>clone facebook</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="containerLogin">
+        <div class="containerLogin" >
             <div class="loginTitle">
                 <h1> <a href="#">facebook</a></h1>
                 <p>Avec Facebook, partagez et restez en contact avec votre entourage.</p>
@@ -19,10 +22,10 @@
             <div class="loginForm">
                 <form action="">
                     <div class="formRow">
-                        <input type="text"   placeholder="Adresse e-mail ou numéro de tel">
+                        <input type="text" placeholder="Adresse e-mail ou numéro de tel">
                     </div>
                     <div class="formRow">
-                        <input type="text"   placeholder="Mot de passe">
+                        <input type="text" placeholder="Mot de passe">
                     </div>
                     <div class="formButton">
                         <button class="btLoginSubmit">se connecter</button>
@@ -32,16 +35,108 @@
                     </div>
                     <div class="divider"></div>
                     <div class="formButton">
-                        <button class="btLoginCreatAccount">créer nouveau compte</button>
+                        <button class="btLoginCreatAccount" id="createAccountButton">créer nouveau compte</button>
                     </div>
                 </form>
-        
+
             </div>
             <div class="loginFooter">
-                <p> <a href="#">Créer une Page</a>  pour une célébrité, une marque ou une entreprise.</p>
+                <p> <a href="#">Créer une Page</a> pour une célébrité, une marque ou une entreprise.</p>
             </div>
         </div>
+        <div class="overlay" id="overlay"></div>
+        <section>
+            <div class="containerRegister" id="regiterPopUp">
+                <div class="close" id="closePopUp">
+                    <i class="fas  fa-times"></i>
+                </div>
+                <div class="registerTitle">
+                    <h2>S'inscrire</h2>
+                    <p>c'est rapide et facile</p>
+                </div>
+                <div class="divider"></div>
+                <div class="registerForm">
+                    <form>
+                        <div class="formGroupInput">
+                            <input type="text" placeholder="Prénom">
+                            <input type="text" placeholder="nom de famille">
+                        </div>
+                        <div class="formInlineInput">
+                            <input type="email" type="number" placeholder="numéro de mobile  ou e-mail">
+                        </div>
+                        <div class="formInlineInput">
+                            <input type="password" placeholder="mot de passe">
+                        </div>
+                        <div class="formInlineDate">
+                            <p>date de naissance <i class="fas fa-question-circle"></i></p>
+                            <div class="formSelectDate">
+                                <select name="" id="" class="day">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                                <select name="" id="" class="month">
+                                    <option value="janvier">janvier</option>
+                                    <option value="fevrier">fevrier</option>
+                                    <option value="mars">mars</option>
+                                    <option value="avril">avril</option>
+                                    <option value="mai">mai</option>
+                                    <option value="juin">juin</option>
+                                </select>
+                                <select name="" id="" class="yeard">
+                                    <option value="2023">2023</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2018">2018</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="formInlineGenre">
+                            <p>Genre <i class="fas fa-question-circle"></i></p>
+                            <div class="formRadioItems">
+                                <div class="formRadioItem">
+                                    <label for="femme">femme</label>
+                                    <input type="radio" name="genre" id="femme" />
+                                </div>
+                                <div class="formRadioItem">
+                                    <label for="homme">homme</label>
+                                    <input type="radio" name="genre" id="homme" />
+                                </div>
+                                <div class="formRadioItem">
+                                    <label for="autre">personnalisé</label>
+                                    <input type="radio" name="genre" id="autre" />
+                                </div>
+                            </div>
+                            <div class="formRegisterInfos">
+                                <p>
+                                    Les personnes qui utilisent notre service ont pu importer vos coordonnées
+                                    sur Facebook. <a href="">En savoir plus</a> .<br>
+                                    <br>
+                                    En cliquant sur S’inscrire, vous acceptez nos <a href="">Conditions générales</a> .
+                                    Découvrez comment nous recueillons, utilisons et partageons vos données
+                                    en lisant notre <a href="">Politique de confidentialité</a> et comment nous
+                                    utilisons les
+                                    cookies et autres technologies similaires en consultant notre <a href="">Politique
+                                        d’utilisation des cookies</a> . Vous recevrez peut-être des notifications par
+                                    texto de notre part et vous pouvez à tout moment vous désabonner.
+                                </p>
+                            </div>
+                            <div class="formRegisterButton">
+                                <button class="btRegisterSubmit">S'inscrire</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
     </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
